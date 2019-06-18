@@ -1,4 +1,5 @@
 import React from 'react';
+import MenuItem from './MenuItem';
 
 const Menu = ({ apps, onSelect }) => {
   return (
@@ -10,13 +11,7 @@ const Menu = ({ apps, onSelect }) => {
       }}
     >
       {apps.map(app => (
-        <div
-          key={app.title}
-          style={{ margin: '0 15px', lineHeight: '60px' }}
-          onClick={() => onSelect(app)}
-        >
-          {app.title}
-        </div>
+        <MenuItem app={app} onSelect={onSelect} />
       ))}
     </div>
   );
