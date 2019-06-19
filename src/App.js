@@ -9,7 +9,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Sample application to test microfrontends</h1>
       <Menu apps={config.applications} onSelect={setSelected} />
       <ApplicationLoader app={selectedApp} />
     </div>
