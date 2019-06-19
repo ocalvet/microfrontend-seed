@@ -1,15 +1,10 @@
 import React from 'react';
+import './Menu.css';
 import MenuItem from './MenuItem';
 
 const Menu = ({ apps, onSelect }) => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center'
-      }}
-    >
+    <div className="menu">
       {apps.map(app => (
         <MenuItem app={app} onSelect={onSelect} />
       ))}
