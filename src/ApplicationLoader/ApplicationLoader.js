@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import './ApplicationLoader.css';
 
 const Menu = ({ app }) => {
   const [imagesCount, setCount] = useState(0);
@@ -24,11 +25,7 @@ const Menu = ({ app }) => {
       use any external site the response headers cannot be X-Frame-Options: SAMEORIGIN */}
       <iframe
         ref={iframeRef}
-        style={{
-          border: 'none',
-          width: '100%',
-          height: '1200px'
-        }}
+        className="app-loader"
         title="application"
         src={app.link}
       />
